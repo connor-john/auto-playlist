@@ -40,13 +40,13 @@ def extract_spotify_info(username, password, friend_username, limit=1000):
     total_messages = 0
     cursor = None
 
-    while total_messages < limit:
+    while limit is None or total_messages < limit:
         try:
             params = {
                 "visual_message_return_type": "unseen",
                 "direction": "older",
                 "seq_id": "40065",
-                "limit": str(min(100, limit - total_messages)),
+                "limit": "100",  # Always fetch 100 messages at a time
             }
             if cursor:
                 params["cursor"] = cursor
@@ -103,6 +103,7 @@ def extract_spotify_info(username, password, friend_username, limit=1000):
         json.dump(list(spotify_links.values()), file, indent=2, ensure_ascii=False)
 
     print_section(f"Spotify links saved successfully to {filename}")
+    return filename
 
 
 if __name__ == "__main__":

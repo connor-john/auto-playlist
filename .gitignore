@@ -2,3 +2,5 @@
 *.json
 .env
 .cache
+*.pyc
+__pycache__
