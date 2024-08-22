@@ -7,6 +7,8 @@ I couldn't find the song I had sent a friend so I built this.
 
 # Introduction
 
+![image](./assets/image.png)
+
 The provided code repository is a Python project that extracts Spotify links shared in an Instagram direct message thread and creates a Spotify playlist from those links. The project aims to automate the process of creating a shared playlist with a friend based on the music tracks shared in an Instagram conversation.
 
 # Codebase Overview
