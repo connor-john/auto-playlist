@@ -46,7 +46,7 @@ def extract_spotify_info(username, password, friend_username, limit=1000):
                 "visual_message_return_type": "unseen",
                 "direction": "older",
                 "seq_id": "40065",
-                "limit": str(min(20, limit - total_messages)),
+                "limit": str(min(100, limit - total_messages)),
             }
             if cursor:
                 params["cursor"] = cursor
